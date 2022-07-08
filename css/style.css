@@ -97,7 +97,10 @@ img {
 .logo-studio {
     color: var(--logo-black-color);
 }
+
+
 /*--  site-nave --*/
+
 .site-nav {
     display: flex;
 }
@@ -119,27 +122,7 @@ img {
     
     transition: color 250ms var(--time-function);
 }
-.icon-link {
-    color: var(--primary-text-color);
 
-    transition: color 250ms var(--time-function), 
-    fill 250ms var(--time-function);
-}
-.icon-link:hover,
-.icon-link:focus {
-    color: var(--accent-color);
-}
-.icon-link .icon:hover, 
-.icon-link .icon:focus {
-    fill: var(--accent-color);
-}
-.icon {
-    display: inline-block;
-    justify-content: center;
-
-    fill: var(--primary-text-color);
-    transition: fill 250ms var(--time-function);
-}
 .site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--accent-color);
@@ -156,7 +139,12 @@ img {
     margin-left: 50px;
 }
 
-.auth-nav .link {
+.icon {
+    display: inline-block;
+    justify-content: center;
+}
+
+.icon-link {
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -167,13 +155,18 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--primary-text-color);
+    fill: var(--primary-text-color);
 
-    transition: color 250ms var(--time-function);
+    transition: fill var(--primary-text-color),
+    color 250ms var(--time-function);
 }
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+
+.icon-link:hover,
+.icon-link:focus {
     color: var(--accent-color);
+    fill: var(--accent-color);
 }
+
 .site-nav .link.current {
     color: var(--accent-color);
 }
@@ -715,11 +708,10 @@ img {
     color: var(--primary-white-color);
     background-color: var(--background-color-footer-socicon);
 
-    transition: color 250ms var(--time-function),
+    transition:
     background-color 250ms var(--time-function);
 }
 .socicon:hover,
 .socicon:focus {
     background-color: var(--accent-color);
-    color: var(--background-color-icon);
 } 
